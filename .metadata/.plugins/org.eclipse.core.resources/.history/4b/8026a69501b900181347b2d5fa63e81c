@@ -1,0 +1,50 @@
+package cinema;
+import java.util.*;
+
+public class cinema {
+	
+	private Scanner teclado;
+	private int identificacion;
+	private int contraseña;
+	private int identificacionval=1006318015;
+	private int contraseñaval=620;
+	
+	
+	public cinema() {
+		
+	   	 teclado=new Scanner(System.in);
+	     System.out.println("INICIAR SESION ");
+	     System.out.println("Ingrese su identificacion: ");
+	     identificacion=teclado.nextInt();
+	     System.out.println("Ingrese su contraseña: ");
+	     contraseña=teclado.nextInt();
+	     
+	   	}
+	public  void clear() {  
+	    System.out.print("\033[H\033[2J");  
+	    System.out.flush();  
+	}  
+	
+	public void validacion(){
+		if((identificacion==identificacionval)&&(contraseña==contraseñaval)) {
+			System.out.println("!Se ha ingresado con exito al sistema¡");
+		}else {
+			System.out.println("!La identificacion o contraseña ingresadas es incorrecta¡");
+			System.out.println("Digite los datos pedidos nuevamente.");
+			clear clr = new clear();
+			clr.clear();
+			cinema cinema1 = new cinema();
+			cinema1.validacion();
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+		cinema cinema1 = new cinema();
+		cinema1.validacion();
+
+	}
+
+}

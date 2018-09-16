@@ -1,0 +1,24 @@
+package cinema;
+
+public class boletas {
+	public void b1() {
+		System.out.println("listar");
+	}
+	
+	public void boleta2() {
+		System.out.println("crear");
+	}
+	
+	public void boleta3() {
+		System.out.println("editar");
+	}
+	
+	public void boleta4() {
+		System.out.println("eliminar");
+	}
+	
+	public void boleta5() {
+		System.out.println("menu");
+	}
+
+}

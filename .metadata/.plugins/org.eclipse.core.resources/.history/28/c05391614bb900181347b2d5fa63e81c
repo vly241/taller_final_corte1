@@ -1,0 +1,8 @@
+package cinema;
+
+public class crear {
+
+public void m1_1() {
+	System.out.println("MENU \n\n");
+	}
+}

@@ -1,0 +1,284 @@
+package cinema;
+import java.util.*;
+import cinema.usuario;
+import cinema.salas;
+import cinema.pelicula;
+import cinema.boletas;
+
+public class menu {
+
+	
+	
+	
+	
+	
+	public void menu1() {
+		int op;
+		
+		System.out.println("MENU PRINCIPAL \n\n");
+		System.out.println("ingrese el numero segun lo siguiente:\n");
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("1). usuarios.");
+		System.out.println("2).salas");
+		System.out.println("3).peliculas");
+		System.out.println("4).boletos.");
+		System.out.println("5).reservas");
+		System.out.println("6). cerrar sesion.");
+		
+		op = sc.nextInt();
+		
+		switch(op) {
+		
+		case 1:
+			
+			int opc;
+			System.out.println("MENU USUARIO \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+			
+			
+			System.out.println("1). listar usuarios.");
+			System.out.println("2). crear usuario");
+			System.out.println("3).editar usuario");
+			System.out.println("4). eliminar usuario.");
+			System.out.println("5). menu principal");
+			
+			
+			opc = sc.nextInt();
+			
+			switch(opc) {
+			
+			case 1:
+				usuario u1 = new usuario();
+				u1.usuario1();
+				
+				break;
+				
+			case 2:
+				usuario u2 = new usuario();
+				u2.usuario2();
+				break;
+				
+			case 3:
+				usuario u3 = new usuario();
+				u3.usuario3();
+				break;
+				
+			case 4:
+				usuario u4 = new usuario();
+				u4.usuario4();
+				break;
+			case 5:
+				usuario u5 = new usuario();
+				u5.usuario5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			
+			break;
+			
+		case 2:
+			
+			
+			System.out.println("MENU SALAS \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar salas.");
+			System.out.println("2). crear salas");
+			System.out.println("3).editar salas");
+			System.out.println("4). eliminar salas.");
+			System.out.println("5). menu principal");
+			
+			
+			op = sc.nextInt();
+			
+			switch(op) {
+			
+			case 1:
+				
+				salas s1 = new salas();
+				s1.sala1();
+				break;
+				
+			case 2:
+				salas s2 = new salas();
+				s2.sala2();
+				break;
+				
+			case 3:
+				salas s3 = new salas();
+				s3.sala3();
+				break;
+				
+			case 4:
+				salas s4 = new salas();
+				s4.sala4();
+				break;
+			case 5:
+				salas s5 = new salas();
+				s5.sala5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			break;
+			
+		case 3:
+			System.out.println("MENU PELICULAS \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar pelicula.");
+			System.out.println("2). crear pelicula");
+			System.out.println("3).editar pelicula");
+			System.out.println("4). eliminar pelicula.");
+			System.out.println("5). menu principal");
+			
+			
+			op = sc.nextInt();
+			
+			switch(op) {
+			
+			case 1:
+				
+				pelicula p1 = new pelicula();
+				p1.pelicula1();
+				
+				break;
+				
+			case 2:
+				pelicula p2 = new pelicula();
+				p2.pelicula2();
+				break;
+				
+				
+			case 3:
+				pelicula p3 = new pelicula();
+				p3.pelicula3();
+				break;
+				
+			case 4:
+				pelicula p4 = new pelicula();
+				p4.pelicula4();
+				break;
+			case 5:
+				pelicula p5 = new pelicula();
+				p5.pelicula5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			break;
+			
+		case 4:
+			System.out.println("MENU BOLETAS\n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar boletas.");
+			System.out.println("2). crear boletas");
+			System.out.println("3).editar boletas");
+			System.out.println("4). eliminar boletas.");
+			System.out.println("5). menu principal");
+			
+			
+			op = sc.nextInt();
+			
+			switch(op) {
+			
+			case 1:
+				boletas b1 = new boletas();
+				b1.boleta1();
+				
+				break;
+				
+			case 2:
+				boletas b2 = new boletas();
+				b2.boleta2();
+				break;
+				
+			case 3:
+				boletas b3 = new boletas();
+				b3.boleta3();
+				break;
+				
+			case 4:
+				boletas b4 = new boletas();
+				b4.boleta4();
+				break;
+			case 5:
+				boletas b5 = new boletas();
+				b5.boleta5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			break;
+		case 5:
+			System.out.println("MENU RESERVAS \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar reserva.");
+			System.out.println("2). crear reserva.");
+			System.out.println("3). pagar reserva.");
+			System.out.println("4). editar reserva.");
+			System.out.println("5). eliminar reserva.");
+			System.out.println("6). menu principal");
+			
+			
+			op = sc.nextInt();
+			
+			switch(op) {
+			
+			case 1:
+				
+				
+				break;
+				
+			case 2:
+				break;
+				
+			case 3:
+				break;
+				
+			case 4:
+				break;
+			case 5:
+				break;
+				
+			case 6:
+				
+				break;
+				
+			default:
+				break;
+				
+			}
+			break;
+			
+		case 6:
+			
+			break;
+			
+		default:
+			break;
+			
+		}
+		sc.close();
+	}
+}

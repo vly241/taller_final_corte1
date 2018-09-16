@@ -1,0 +1,8 @@
+package cinema;
+
+public class menu {
+
+	public void menu1() {
+		System.out.println("");
+	}
+}

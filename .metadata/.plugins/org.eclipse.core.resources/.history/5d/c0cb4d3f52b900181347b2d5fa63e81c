@@ -1,0 +1,284 @@
+package cinema;
+import java.util.*;
+import cinema.usuario;
+import cinema.salas;
+import cinema.pelicula;
+import cinema.boletas;
+
+public class menu {
+
+	
+	
+	
+	
+	
+	public void menu1() {
+		int op;
+		
+		System.out.println("MENU PRINCIPAL \n\n");
+		System.out.println("ingrese el numero segun lo siguiente:\n");
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("1). usuarios.");
+		System.out.println("2).salas");
+		System.out.println("3).peliculas");
+		System.out.println("4).boletos.");
+		System.out.println("5).reservas");
+		System.out.println("6). cerrar sesion.");
+		
+		op = sc.nextInt();
+		
+		switch(op) {
+		
+		case 1:
+			
+			int opc;
+			System.out.println("MENU USUARIO \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+			
+			
+			System.out.println("1). listar usuarios.");
+			System.out.println("2). crear usuario");
+			System.out.println("3).editar usuario");
+			System.out.println("4). eliminar usuario.");
+			System.out.println("5). menu principal");
+			
+			
+			opc = sc.nextInt();
+			usuario u = new usuario();
+			switch(opc) {
+			
+			case 1:
+				
+				u.usuario1();
+				
+				break;
+				
+			case 2:
+				
+				u.usuario2();
+				break;
+				
+			case 3:
+			
+				u.usuario3();
+				break;
+				
+			case 4:
+			
+				u.usuario4();
+				break;
+			case 5:
+				
+				u.usuario5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			
+			break;
+			
+		case 2:
+			
+			
+			System.out.println("MENU SALAS \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar salas.");
+			System.out.println("2). crear salas");
+			System.out.println("3).editar salas");
+			System.out.println("4). eliminar salas.");
+			System.out.println("5). menu principal");
+			
+			
+			op = sc.nextInt();
+			salas s = new salas();
+			switch(op) {
+			
+			case 1:
+				
+			
+				s.sala1();
+				break;
+				
+			case 2:
+				
+				s.sala2();
+				break;
+				
+			case 3:
+				
+				s.sala3();
+				break;
+				
+			case 4:
+			
+				s.sala4();
+				break;
+			case 5:
+				
+				s.sala5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			break;
+			
+		case 3:
+			System.out.println("MENU PELICULAS \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar pelicula.");
+			System.out.println("2). crear pelicula");
+			System.out.println("3).editar pelicula");
+			System.out.println("4). eliminar pelicula.");
+			System.out.println("5). menu principal");
+			
+			
+			op = sc.nextInt();
+			pelicula p = new pelicula();
+			switch(op) {
+			
+			case 1:
+				
+		
+				p.pelicula1();
+				
+				break;
+				
+			case 2:
+			
+				p.pelicula2();
+				break;
+				
+				
+			case 3:
+			
+				p.pelicula3();
+				break;
+				
+			case 4:
+			
+				p.pelicula4();
+				break;
+			case 5:
+				
+				p.pelicula5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			break;
+			
+		case 4:
+			System.out.println("MENU BOLETAS\n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar boletas.");
+			System.out.println("2). crear boletas");
+			System.out.println("3).editar boletas");
+			System.out.println("4). eliminar boletas.");
+			System.out.println("5). menu principal");
+			
+			
+			op = sc.nextInt();
+			boletas b = new boletas();
+			switch(op) {
+			
+			case 1:
+				
+				b.b1();
+				
+				break;
+				
+			case 2:
+				
+				b.boleta2();
+				break;
+				
+			case 3:
+				
+				b.boleta3();
+				break;
+				
+			case 4:
+				
+				b.boleta4();
+				break;
+			case 5:
+				
+				b.boleta5();
+				break;
+				
+			
+				
+			default:
+				break;
+				
+			}
+			break;
+		case 5:
+			System.out.println("MENU RESERVAS \n\n");
+			System.out.println("ingrese el numero segun lo siguiente:\n");
+		
+			System.out.println("1). listar reserva.");
+			System.out.println("2). crear reserva.");
+			System.out.println("3). pagar reserva.");
+			System.out.println("4). editar reserva.");
+			System.out.println("5). eliminar reserva.");
+			System.out.println("6). menu principal");
+			
+			
+			op = sc.nextInt();
+			
+			switch(op) {
+			
+			case 1:
+				
+				
+				break;
+				
+			case 2:
+				break;
+				
+			case 3:
+				break;
+				
+			case 4:
+				break;
+			case 5:
+				break;
+				
+			case 6:
+				
+				break;
+				
+			default:
+				break;
+				
+			}
+			break;
+			
+		case 6:
+			
+			break;
+			
+		default:
+			break;
+			
+		}
+		sc.close();
+	}
+}

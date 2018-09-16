@@ -1,0 +1,24 @@
+package cinema;
+
+public class salas {
+
+	public void sala1() {
+		System.out.println("listar");
+	}
+	
+	public void sala2() {
+		System.out.println("crear");
+	}
+	
+	public void sala3() {
+		System.out.println("editar");
+	}
+	
+	public void sala4() {
+		System.out.println("eliminar");
+	}
+	
+	public void sala5() {
+		System.out.println("menu");
+	}
+}

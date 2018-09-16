@@ -1,0 +1,48 @@
+package cinema;
+import java.util.*;
+public class menu {
+
+	public void menu1() {
+		int op;
+		
+		System.out.println("MENU PRINCIPAL \n\n");
+		System.out.println("ingrese el numero segun lo siguiente:\n");
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("1). usuarios.");
+		System.out.println("2).salas");
+		System.out.println("3).peliculas");
+		System.out.println("4).boletos.");
+		System.out.println("5).reservas");
+		System.out.println("6). cerrar sesion.");
+		
+		op = sc.nextInt();
+		sc.close();
+		switch(op) {
+		
+		case 1:
+			
+			
+			break;
+			
+		case 2:
+			break;
+			
+		case 3:
+			break;
+			
+		case 4:
+			break;
+		case 5:
+			break;
+			
+		case 6:
+			
+			break;
+			
+		default:
+			break;
+			
+		}
+	}
+}

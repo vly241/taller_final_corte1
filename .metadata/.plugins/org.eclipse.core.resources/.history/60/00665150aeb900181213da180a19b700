@@ -1,0 +1,23 @@
+package cinema;
+
+public class pelicula {
+	public void pelicula1() {
+		System.out.println("listar");
+	}
+	
+	public void pelicula2() {
+		System.out.println("crear");
+	}
+	
+	public void pelicula3() {
+		System.out.println("editar");
+	}
+	
+	public void pelicula4() {
+		System.out.println("eliminar");
+	}
+	
+	public void pelicula5() {
+		System.out.println("menu");
+	}
+}

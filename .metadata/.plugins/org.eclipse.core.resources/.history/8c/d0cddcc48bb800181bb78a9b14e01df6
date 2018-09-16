@@ -1,0 +1,26 @@
+package cinema;
+import java.util.Scanner;
+
+public class cinema {
+	
+	private Scanner teclado;
+	private int identificacion;
+	private int contraseña;
+	
+	
+	public cinema() {
+	   	 teclado=new Scanner(System.in);
+	     System.out.println("INICIAR SESION ");
+	     System.out.println("Ingrese su identificacion: ");
+	     identificacion=teclado.nextInt();
+	     System.out.println("Ingrese su contraseña ");
+	     contraseña=teclado.nextInt();
+	     
+	   	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

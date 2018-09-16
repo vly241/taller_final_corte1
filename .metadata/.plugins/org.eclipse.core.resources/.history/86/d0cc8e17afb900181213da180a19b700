@@ -1,0 +1,26 @@
+package cinema;
+
+public class reservas {
+	public void reserva1() {
+		System.out.println("listar");
+	}
+	
+	public void reserva2() {
+		System.out.println("crear");
+	}
+	
+	public void reserva3() {
+		System.out.println("pago");
+	}
+	
+	public void reserva4() {
+		System.out.println("editarr");
+	}
+	public void reserva6() {
+		System.out.println("eliminar");
+	}
+	public void reserva5() {
+		System.out.println("menu");
+	}
+
+}
