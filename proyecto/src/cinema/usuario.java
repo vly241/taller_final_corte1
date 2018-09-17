@@ -1,97 +1,133 @@
 package cinema;
 import java.util.*;
+import cinema.menu;
+
+
 public class usuario {
+	
+	menu p = new menu();
+	//atributos
+	   private Scanner sc;
+	    String[] nombre = new String[30];
+	    String[] cedula= new String[30];
+	    String[] edad= new String[30];
+	    int a;
+	    int b,cont;
+       int n=0;
 
-	private Scanner teclado;
-    private String[] nombre;
-    private int[] id;
-    private int n;
-    private int c=1,c1=1;
-    
-    
-    public void  crear() {
-    	
-    	teclado = new Scanner(System.in);
-    	System.out.println("cuantos desea registrar: ");
-    	n=teclado.nextInt();
-    	nombre=new String [n];
-    	id=new int[n];
-    	for(int x=0; x<n;x++) {
-    		System.out.println("ingrese el nombre del usuario "+c+" :");
-        	nombre[x]=teclado.next();
-        	System.out.println("ingrese la identificacion usuario"+c+" :");
-        	id[x]=teclado.nextInt();
-        	c++;
-    	}
-    	
-    }
+	    public usuario() {
+	        // TODO Auto-generated constructor stub
+	        nombre[0]= "";
+	        edad[0]="";
+	        cedula[0]="";
+	        a=0;
+	        b=0;
+	        cont=0;
+	        
 
-    public void imprimir() {
-    	
-    	for(int i=0;i<n;i++) {
-    		System.out.println("nombre usuario "+c1+" :"+ nombre[i]);
-        	System.out.println("identificacion usuario "+c1+" :"+ id[i]);
-        	System.out.println();
-        	c1++;
-    	}
-    	
-    }
+	    }
 
+	    public void CrearUsuario() {
+	        sc =new Scanner(System.in);
+	        System.out.println("Usted decidio Crear un usuario nuevo.");
+	        System.out.println("Ingrese el numero de usuarios que desea crear:");
+	        if(a>0) {
+	            b=sc.nextInt();
+	            cont=a+b;
+	            for(int i=a+1;i<=cont;i++) {
+	                sc.nextLine();
+	                System.out.println(i+".) Ingrese el nombre del usuario: ");
+	                nombre[i]=sc.nextLine();
+	                System.out.println(i+".) Ingrese la cedula del usuario: ");
+	                cedula[i]=sc.nextLine();
+	                System.out.println(i+".) Ingrese la edad del usuario: ");
+	                edad[i]=sc.nextLine();
+	                System.out.println("");
+	                n=n+b;
+	            }
+	        }else {
+	            a=sc.nextInt();
+	            for(int i=1;i<=a;i++) {
+	                sc.nextLine();
+	                System.out.println(i+".) Ingrese el nombre del usuario: ");
+	                nombre[i]=sc.nextLine();
+	                System.out.println(i+".) Ingrese la cedula del usuario: ");
+	                cedula[i]=sc.nextLine();
+	                System.out.println(i+".) Ingrese la edad del usuario: ");
+	                edad[i]=sc.nextLine();
+	                System.out.println("");
+	                n=n+a;
+	            }
+	        }
+	        System.out.println("Los usuarios se han creado con exito.");
 
-
-
-public void usuario1() {
-	int opc;
-	System.out.println("MENU USUARIO \n\n");
-	System.out.println("ingrese el numero segun lo siguiente:\n");
+	    }
 	
 	
-	System.out.println("1). listar usuarios.");
-	System.out.println("2). crear usuario");
-	System.out.println("3).editar usuario");
-	System.out.println("4). eliminar usuario.");
-	System.out.println("5). menu principal\n");
-	Scanner sc = new Scanner(System.in);
-	opc = sc.nextInt();
-	
-	
-	switch(opc) {
-	
-	case 1:
-		imprimir();
-		 usuario1();
-		break;
+	public void ListarUsuario() {
+		sc =new Scanner(System.in);
 		
-	case 2:
+		System.out.println("Usted decidio listar los usuarios ingresados.");
 		
-	    crear();
-	    usuario1();
-		
-		
-		break;
-		
-	case 3:
-	
-	
-		break;
-		
-	case 4:
-	
-	
-		break;
-	case 5:
-		menu m = new menu();
-		m.menu1();
-		
-		break;
-		
-	
-		
-	default:
-		break;
+		if(n==0) {
+			System.out.println("los datos no han sido ingresados ");
+		}else {
+			for(int i=1;i<=n;i++) {
+				System.out.println(i+".)El nombre del usuario es: "+this.nombre[i]);
+				System.out.println(i+".)La cedula del usuario es: "+this.cedula[i]);
+				System.out.println(i+".)La edad del usuario es: "+this.edad[i]);
+				System.out.println(" ");
+			}
+			System.out.println("Los datos de usuario se han mostrado correctamente.");
+		}
 		
 	}
-	sc.close();
+	
+	public void EditarUsuarios() {
+		sc =new Scanner(System.in);
+		
+		System.out.println("Usted decidio editar los usuarios.");
+		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para editar el usuario determinado.");
+		for(int i=1;i<=n;i++) {
+			System.out.println(i+".)El nombre del usuario es: "+this.nombre[i]);
+			System.out.println(i+".)La cedula del usuario es: "+this.cedula[i]);
+			System.out.println(i+".)La edad del usuario es: "+this.edad[i]);
+			System.out.println(" ");
+		}
+		System.out.println("Ingrese numero:");
+		int i=sc.nextInt();
+		sc.nextLine();
+		System.out.println(i+".) Cambie el nombre del usuario: ");
+		nombre[i]=sc.nextLine();
+		System.out.println("Cambie la cedula del usuario: ");
+		cedula[i]=sc.nextLine();
+		System.out.println("Cambie la edad de la persona: ");
+		edad[i]=sc.nextLine();
+		System.out.println("");
+		System.out.println("Los datos han sido guardados correctamente.");
+	
 	}
-
+	
+	public void EliminarUsuario() {
+		
+		sc =new Scanner(System.in);
+		System.out.println("Usted decidio eliminar los usuarios: ");
+		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para eliminar el usuario determinado.");
+		for(int i=1;i<=n;i++) {
+			System.out.println(i+".)El nombre del usuario es: "+this.nombre[i]);
+			System.out.println("La cedula del usuario es: "+this.cedula[i]);
+			System.out.println("La edad del usuario es: "+this.edad[i]);
+			System.out.println(" ");
+		}
+		sc.nextLine();
+		System.out.println("Ingrese numero:");
+		int i=sc.nextInt();
+		nombre[i]="";
+		cedula[i]="";
+		edad[i]="";
+		System.out.println("");
+		System.out.println("Los datos han sido eliminados correctamente.");
+	
+	}
+	
 }

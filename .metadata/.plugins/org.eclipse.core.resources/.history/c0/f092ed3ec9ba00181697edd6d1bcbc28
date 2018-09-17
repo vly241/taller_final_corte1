@@ -1,0 +1,134 @@
+package cinema;
+import java.util.*;
+public class salas {
+
+	
+	
+	
+		
+		menu p = new menu();
+		
+		//atributos
+		   private Scanner sc;
+		    String[] nombre_sala = new String[30];
+		    String[] id= new String[30];
+		    int a1;
+		    int b1,cont1;
+	       int n1=0;
+
+		    public salas() {
+		        // TODO Auto-generated constructor stub
+		        nombre_sala[0]= "";
+		       
+		        id[0]="";
+		        a1=0;
+		        b1=0;
+		        cont1=0;
+		        
+
+		    }
+
+		    public void CrearSala() {
+		        sc =new Scanner(System.in);
+		        System.out.println("Usted decidio Crear un usuario nuevo.");
+		        System.out.println("Ingrese el numero de usuarios que desea crear:");
+		        if(a1>0) {
+		            b1=sc.nextInt();
+		            cont1=a1+b1;
+		            for(int i=a1+1;i<=cont1;i++) {
+		                sc.nextLine();
+		                System.out.println(i+".) Ingrese el nombre de la sala: ");
+		                nombre_sala[i]=sc.nextLine();
+		                
+		                System.out.println(i+".) Ingrese la identificacion de la sala: ");
+		                id[i]=sc.nextLine();
+		                System.out.println("");
+		                n1=n1+b1;
+		            }
+		        }else {
+		            a1=sc.nextInt();
+		            for(int i=1;i<=a1;i++) {
+		                sc.nextLine();
+		                System.out.println(i+".) Ingrese el nombre de la sala: ");
+		                nombre_sala[i]=sc.nextLine();
+		                
+		                System.out.println(i+".) Ingrese la identificacion de la sala: ");
+		                id[i]=sc.nextLine();
+		                System.out.println("");
+		                n1=n1+a1;
+		            }
+		        }
+		        System.out.println("las salas se han creado con exito.");
+
+		    }
+		
+		
+		public void ListarSala() {
+			sc =new Scanner(System.in);
+			
+			System.out.println("Usted decidio listar las salas ingresados.");
+			
+			if(n1==0) {
+				System.out.println("los datos no han sido registrados...\n");
+			}else {
+				for(int i=1;i<=n1;i++) {
+					System.out.println(i+".)El nombre de la sala es: "+this.nombre_sala[i]);
+					System.out.println(i+".)La identificacion de la sala es: "+this.id[i]);
+					
+					System.out.println(" ");
+				}
+				System.out.println("Los datos de usuario se han mostrado correctamente.");
+			}
+			
+		}
+		
+		public void EditarSalas() {
+			sc =new Scanner(System.in);
+			
+			System.out.println("Usted decidio editar las salas.");
+			System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para editar el usuario determinado.");
+			for(int i=1;i<=n1;i++) {
+				System.out.println(i+".)El nombre de la sala es: "+this.nombre_sala[i]);
+				System.out.println(i+".)La identificacion de la sala es: "+this.id[i]);
+				
+				System.out.println(" ");
+			}
+			System.out.println("Ingrese numero:");
+			int i=sc.nextInt();
+			sc.nextLine();
+			System.out.println(i+".) Cambie el nombre de la sala: ");
+			nombre_sala[i]=sc.nextLine();
+			System.out.println("Cambie la identificacion de la sala: ");
+			id[i]=sc.nextLine();
+			
+			System.out.println("");
+			System.out.println("Los datos han sido guardados correctamente.");
+		
+		}
+		
+		public void EliminarSalas() {
+			
+			sc =new Scanner(System.in);
+			System.out.println("Usted decidio eliminar los usuarios: ");
+			System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para eliminar el usuario determinado.");
+			for(int i=1;i<=n1;i++) {
+				System.out.println(i+".)El nombre de la sala es: "+this.nombre_sala[i]);
+				System.out.println("La identificacion de la sala es: "+this.id[i]);
+				
+				System.out.println(" ");
+			}
+			sc.nextLine();
+			System.out.println("Ingrese numero:");
+			int i=sc.nextInt();
+			nombre_sala[i]="";
+			id[i]="";
+			
+			System.out.println("");
+			System.out.println("Los datos han sido eliminados correctamente.");
+		
+		}
+	
+	}
+	
+	
+

@@ -1,0 +1,94 @@
+package cinema;
+import java.util.*;
+public class salas {
+
+	private Scanner teclado;
+    private String[] nombre_sala;
+   
+    private int n;
+    private int c=1,c1=1;
+    
+    
+    public void  crear() {
+    	
+    	teclado = new Scanner(System.in);
+    	System.out.println("cuantos desea registrar: ");
+    	n=teclado.nextInt();
+    	nombre_sala=new String [n];
+    	
+    	for(int x=0; x<n;x++) {
+    		System.out.println("ingrese el nombre del usuario "+c+" :");
+        	nombre_sala[x]=teclado.next();
+        	
+        	c++;
+    	}
+    	
+    }
+
+    public void imprimir() {
+    	
+    	for(int i=0;i<n;i++) {
+    		System.out.println("nombre usuario "+c1+" :"+ nombre[i]);
+        	System.out.println("identificacion usuario "+c1+" :"+ id[i]);
+        	System.out.println();
+        	c1++;
+    	}
+    	
+    }
+
+	
+	
+	
+	
+	public void sala1() {
+		int op;
+		System.out.println("MENU SALAS \n\n");
+		System.out.println("ingrese el numero segun lo siguiente:\n");
+	
+		System.out.println("1). listar salas.");
+		System.out.println("2). crear salas");
+		System.out.println("3).editar salas");
+		System.out.println("4). eliminar salas.");
+		System.out.println("5). menu principal");
+		
+		Scanner sc = new Scanner(System.in);
+		op = sc.nextInt();
+		
+		switch(op) {
+		
+		case 1:
+			
+		
+		
+			break;
+			
+		case 2:
+			
+			
+			break;
+			
+		case 3:
+			
+		
+			break;
+			
+		case 4:
+		
+	
+			break;
+		case 5:
+			
+		
+			break;
+			
+		
+			
+		default:
+			break;
+			
+		}
+		sc.close();
+	}
+	
+	
+}
