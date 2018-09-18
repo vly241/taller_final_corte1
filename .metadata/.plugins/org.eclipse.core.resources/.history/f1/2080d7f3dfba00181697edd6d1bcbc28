@@ -101,8 +101,14 @@ public class reservas {
 	
 	public void pagarReserva() {
 		int r;
-		
-		System.out.println("Usted decidio editar los usuarios.");
+        System.out.println("DESEA USTED PAGAR LA RESERVA?\n");
+        System.out.println("1).si el pago fue efectuado.");
+        System.out.println("2).el pago no fue efectuado.");
+        System.out.println();
+        r=sc.nextInt();
+        new java.util.Scanner(System.in).nextLine();
+       
+        System.out.println("Usted decidio editar los usuarios.");
 		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para editar el usuario determinado.");
 		for(int i=1;i<=n;i++) {
 			System.out.println(i+".)El nombre de la reserva es: "+this.nombre_r[i]);
@@ -113,18 +119,9 @@ public class reservas {
         System.out.println("ingrese el numero del registro de la reserva: \n");
         int i=sc.nextInt();
 		sc.nextLine();
-		
-        System.out.println("DESEA USTED PAGAR LA RESERVA?\n");
-        System.out.println("1).si el pago fue efectuado.");
-        System.out.println("2).el pago no fue efectuado.");
-        System.out.println();
-        r=sc.nextInt();
-       
-       
-        
-		if(r==1) {
+		if(i==1) {
 			reserva[i]=("el pago a sido efectuado.");
-		}else if(r==2){
+		}else if(i==2){
 			reserva[i]=("no esta pago");
 		}else {
 			System.out.println("los datos no son correctos..");

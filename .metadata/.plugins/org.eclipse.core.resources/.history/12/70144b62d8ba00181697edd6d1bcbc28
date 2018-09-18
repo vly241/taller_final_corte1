@@ -4,7 +4,7 @@ import cinema.usuario;
 import cinema.salas;
 import cinema.pelicula;
 import cinema.boletas;
-import cinema.reservas;
+
 
 public class menu {
 
@@ -19,7 +19,6 @@ public class menu {
 		salas s = new salas();
 		pelicula p = new pelicula();
 		boletas b = new boletas();
-		reservas r = new reservas();
 		
 		do {
 		System.out.println("		BIEMVENIDO AL MENU DEL CINEMA.  ");
@@ -304,7 +303,7 @@ public class menu {
 				
 				case 1:
 					System.out.flush();
-					r.ListarReserva();
+					
 					new java.util.Scanner(System.in).nextLine();
 				
 				
@@ -312,7 +311,7 @@ public class menu {
 					
 				case 2:
 	                System.out.flush();
-					r.CrearReserva();
+					
 					new java.util.Scanner(System.in).nextLine();
 					
 					break;
@@ -320,19 +319,19 @@ public class menu {
 				case 3:
 					
 	                System.out.flush();
-					r.pagarReserva();
+					
 					new java.util.Scanner(System.in).nextLine();
 					break;
 					
 				case 4:
 	                System.out.flush();
-					r.EditarReserva();
+					
 					new java.util.Scanner(System.in).nextLine();
 			
 					break;
 				case 5:
 	                System.out.flush();
-					r.EliminarReserva();
+					
 					new java.util.Scanner(System.in).nextLine();
 			
 					break;
