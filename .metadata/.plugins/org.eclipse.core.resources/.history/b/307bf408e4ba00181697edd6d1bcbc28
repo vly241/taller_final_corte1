@@ -44,7 +44,7 @@ public class salas {
 		                System.out.println(i+".) Ingrese la identificacion de la sala: ");
 		                id[i]=sc.nextLine();
 		                System.out.println("");
-		                n1++;
+		                n1=n1+b1;
 		            }
 		        }else {
 		            a1=sc.nextInt();
@@ -56,7 +56,7 @@ public class salas {
 		                System.out.println(i+".) Ingrese la identificacion de la sala: ");
 		                id[i]=sc.nextLine();
 		                System.out.println("");
-		                n1++;
+		                n1=n1+a1;
 		            }
 		        }
 		        System.out.println("las salas se han creado con exito.");

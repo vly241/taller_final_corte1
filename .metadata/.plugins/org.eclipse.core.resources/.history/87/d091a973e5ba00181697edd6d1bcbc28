@@ -340,7 +340,7 @@ public class menu {
 					System.out.println("Usted decidio regresar al menu de inicio.");
 					System.out.print("");
 					new java.util.Scanner(System.in).nextLine();
-				    System.out.flush();
+				System.out.flush();
 				
 					break;
 					
@@ -353,7 +353,7 @@ public class menu {
 					break;
 					
 				}
-				}while(op!=6);
+				}while(op!=5);
 			break;
 		case 6:
 			System.out.println("");

@@ -42,7 +42,7 @@ public class boletas {
 	                System.out.println(i+".) Ingrese la pelicula a ver : ");
 	                peli[i]=sc.nextLine();
 	                System.out.println("");
-	                n++;
+	                n=n+b;
 	            }
 	        }else {
 	            a=sc.nextInt();
@@ -55,7 +55,7 @@ public class boletas {
 	                System.out.println(i+".) Ingrese la pelicula a ver : ");
 	                peli[i]=sc.nextLine();
 	                System.out.println("");
-	                n++;
+	                n=n+a;
 	            }
 	        }
 	        System.out.println("Los boletoa se han creado con exito.");

@@ -353,7 +353,7 @@ public class menu {
 					break;
 					
 				}
-				}while(op!=6);
+				}while(op!=5);
 			break;
 		case 6:
 			System.out.println("");

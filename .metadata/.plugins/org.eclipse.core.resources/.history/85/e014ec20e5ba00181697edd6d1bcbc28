@@ -32,9 +32,9 @@ public class pelicula {
 	            cont=a+b;
 	            for(int i=a+1;i<=cont;i++) {
 	                sc.nextLine();
-	                System.out.println(i+".) Ingrese el nombre de la pelicula: ");
+	                System.out.println(i+".) Ingrese el nombre del usuario: ");
 	                nombre_p[i]=sc.nextLine();
-	                System.out.println(i+".) Ingrese el genero de la pelicula: ");
+	                System.out.println(i+".) Ingrese la cedula del usuario: ");
 	                genero[i]=sc.nextLine();
 	               
 	                System.out.println("");

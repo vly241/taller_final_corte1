@@ -36,13 +36,10 @@ public class reservas {
 	            cont=a+b;
 	            for(int i=a+1;i<=cont;i++) {
 	                sc.nextLine();
-	                System.out.println(i+".) Ingrese el nombre de la persona que realizo la reserva : ");
+	                System.out.println(i+".) Ingrese el nombre de la reserva : ");
 	                nombre_r[i]=sc.nextLine();
 	                System.out.println(i+".) Ingrese el dia de la reserva: ");
 	                id[i]=sc.nextLine();
-	                System.out.println("ingrese la pelicula a ver: \n");
-	                peli[i]=sc.next();
-	                
 	                System.out.println(i+".) Ingrese los datos segun lo siguiente: \n ");
 	                System.out.println("1).si el pago fue efectuado.");
 	                System.out.println("2).el pago no fue efectuado.");
@@ -54,20 +51,23 @@ public class reservas {
 	                	 System.out.println("pago efectuado..");
 	                }else if(r==2) {
 	                	reserva[i]=("no se encuentra pago");
-	                	 System.out.println("si desea pagar a futuro en el menu esta la opcion de pago y realizar el pago...");
+	                	 System.out.println("si desea pagar a futuro en el menu esta la opcion de pago y realizar el pago.");
 	                }else {
 	                	 System.out.println("los datos no son correctos..");
 	                }
-	                
-	        
 	                System.out.println("");
-	                n++;
+	                
+	                System.out.println("ingrese la pelicula a ver: \n");
+	                peli[i]=sc.nextLine();
+	                
+	                System.out.println("");
+	                n=n+b;
 	            }
 	        }else {
 	            a=sc.nextInt();
 	            for(int i=1;i<=a;i++) {
 	            	 sc.nextLine();
-		                System.out.println(i+".) Ingrese el nombre de la pesona que realizo la reserva : ");
+		                System.out.println(i+".) Ingrese el nombre de la reserva : ");
 		                nombre_r[i]=sc.nextLine();
 		                System.out.println(i+".) Ingrese el dia de la reserva: ");
 		                id[i]=sc.nextLine();
@@ -92,7 +92,7 @@ public class reservas {
 		                peli[i]=sc.nextLine();
 		                
 		                System.out.println("");
-	                n++;
+	                n=n+a;
 	            }
 	        }
 	        System.out.println("Las reservas se han creado con exito.");
@@ -105,7 +105,7 @@ public class reservas {
 		System.out.println("Usted decidio editar los usuarios.");
 		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para editar el usuario determinado.");
 		for(int i=1;i<=n;i++) {
-			System.out.println(i+".)El nombre de la persona que realizo la reserva es: "+this.nombre_r[i]);
+			System.out.println(i+".)El nombre de la reserva es: "+this.nombre_r[i]);
 			System.out.println(i+".)el pago fue: "+this.reserva[i]);
 			
 			System.out.println(" ");
@@ -141,7 +141,7 @@ public class reservas {
 			System.out.println("los datos no han sido ingresados ");
 		}else {
 			for(int i=1;i<=n;i++) {
-				System.out.println(i+".)El nombre de la persona que realizo la  reserva es: "+this.nombre_r[i]);
+				System.out.println(i+".)El nombre de la reserva es: "+this.nombre_r[i]);
 				System.out.println(i+".)el dia de la reserva  es: "+this.id[i]);
 				System.out.println(i+".)el pago fue: "+this.reserva[i]);
 				System.out.println("La pelicula a ver es: "+this.peli[i]);
@@ -158,7 +158,7 @@ public class reservas {
 		System.out.println("Usted decidio editar los usuarios.");
 		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para editar el usuario determinado.");
 		for(int i=1;i<=n;i++) {
-			System.out.println(i+".)El nombre de la persona que realizo la reserva es: "+this.nombre_r[i]);
+			System.out.println(i+".)El nombre de la reserva es: "+this.nombre_r[i]);
 			System.out.println(i+".)El dia de la reserva es : "+this.id[i]);
 			System.out.println(i+".)la pelicula a ver es: "+this.peli[i]);
 			System.out.println(" ");
@@ -180,13 +180,13 @@ public class reservas {
 	public void EliminarReserva() {
 		
 		sc =new Scanner(System.in);
-		System.out.println("Usted decidio eliminar los usuarios: \n");
-		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para eliminar el usuario determinado.\n");
+		System.out.println("Usted decidio eliminar los usuarios: ");
+		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para eliminar el usuario determinado.");
 		for(int i=1;i<=n;i++) {
-			System.out.println(i+".)El nombre de la persona que realizo la reserva es: "+this.nombre_r[i]);
-			System.out.println("El dia de la reserva es : "+this.id[i]);
+			System.out.println(i+".)El nombre del usuario es: "+this.nombre_r[i]);
+			System.out.println("La cedula del usuario es: "+this.id[i]);
 			System.out.println(i+".)el pago fue: "+this.reserva[i]);
-			System.out.println("La pelicula a ver es:  "+this.peli[i]);
+			System.out.println("La edad del usuario es: "+this.peli[i]);
 			System.out.println(" ");
 		}
 		sc.nextLine();

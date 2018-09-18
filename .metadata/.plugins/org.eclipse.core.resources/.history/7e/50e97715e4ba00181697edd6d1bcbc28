@@ -32,13 +32,13 @@ public class pelicula {
 	            cont=a+b;
 	            for(int i=a+1;i<=cont;i++) {
 	                sc.nextLine();
-	                System.out.println(i+".) Ingrese el nombre de la pelicula: ");
+	                System.out.println(i+".) Ingrese el nombre del usuario: ");
 	                nombre_p[i]=sc.nextLine();
-	                System.out.println(i+".) Ingrese el genero de la pelicula: ");
+	                System.out.println(i+".) Ingrese la cedula del usuario: ");
 	                genero[i]=sc.nextLine();
 	               
 	                System.out.println("");
-	                n++;
+	                n=n+b;
 	            }
 	        }else {
 	            a=sc.nextInt();
@@ -50,7 +50,7 @@ public class pelicula {
 		                genero[i]=sc.nextLine();
 		               
 	                System.out.println("");
-	                n++;
+	                n=n+a;
 	            }
 	        }
 	        System.out.println("Las peliculas se han agregado con exito.");

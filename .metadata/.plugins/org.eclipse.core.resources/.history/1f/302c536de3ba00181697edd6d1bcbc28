@@ -33,7 +33,7 @@ public class usuario {
 	        System.out.println("Ingrese el numero de usuarios que desea crear:");
 	        if(a>0) {
 	            b=sc.nextInt();
-	           
+	            n=n+b;
 	            cont=a+b;
 	            for(int i=a+1;i<=cont;i++) {
 	                sc.nextLine();
@@ -44,7 +44,7 @@ public class usuario {
 	                System.out.println(i+".) Ingrese la edad del usuario: ");
 	                edad[i]=sc.nextLine();
 	                System.out.println("");
-	                n++;
+	               
 	            }
 	            
 	        }else {
@@ -58,7 +58,7 @@ public class usuario {
 	                System.out.println(i+".) Ingrese la edad del usuario: ");
 	                edad[i]=sc.nextLine();
 	                System.out.println("");
-	                n++;
+	                n=n+a;
 	            }
 	        }
 	        System.out.println("Los usuarios se han creado con exito.");

@@ -42,7 +42,6 @@ public class reservas {
 	                id[i]=sc.nextLine();
 	                System.out.println("ingrese la pelicula a ver: \n");
 	                peli[i]=sc.next();
-	                
 	                System.out.println(i+".) Ingrese los datos segun lo siguiente: \n ");
 	                System.out.println("1).si el pago fue efectuado.");
 	                System.out.println("2).el pago no fue efectuado.");

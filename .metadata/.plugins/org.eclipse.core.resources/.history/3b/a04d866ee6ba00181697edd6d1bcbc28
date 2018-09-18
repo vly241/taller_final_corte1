@@ -40,9 +40,6 @@ public class reservas {
 	                nombre_r[i]=sc.nextLine();
 	                System.out.println(i+".) Ingrese el dia de la reserva: ");
 	                id[i]=sc.nextLine();
-	                System.out.println("ingrese la pelicula a ver: \n");
-	                peli[i]=sc.next();
-	                
 	                System.out.println(i+".) Ingrese los datos segun lo siguiente: \n ");
 	                System.out.println("1).si el pago fue efectuado.");
 	                System.out.println("2).el pago no fue efectuado.");
@@ -54,12 +51,15 @@ public class reservas {
 	                	 System.out.println("pago efectuado..");
 	                }else if(r==2) {
 	                	reserva[i]=("no se encuentra pago");
-	                	 System.out.println("si desea pagar a futuro en el menu esta la opcion de pago y realizar el pago...");
+	                	 System.out.println("si desea pagar a futuro en el menu esta la opcion de pago y realizar el pago.");
 	                }else {
 	                	 System.out.println("los datos no son correctos..");
 	                }
+	                System.out.println("");
 	                
-	        
+	                System.out.println("ingrese la pelicula a ver: \n");
+	                peli[i]=sc.nextLine();
+	                
 	                System.out.println("");
 	                n++;
 	            }
